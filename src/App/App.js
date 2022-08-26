@@ -1,25 +1,26 @@
-import logo from '../logo.svg';
-import './App.css';
+import CardsList from "../Cards-list/CardsList";
+import AddExpense from "../Add-Expense/AddExpense";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textShadow: "0.5px 0.5px 1px darkgray",
+        flexDirection: "column",
+        backgroundColor: "#4b4b4b",
+        width: "700px",
+        padding: "30px 0",
+        borderRadius: "10px",
+        margin: "0 auto",
+      }}
+    >
+      <AddExpense />
+      <CardsList />
     </div>
   );
-}
+};
 
 export default App;

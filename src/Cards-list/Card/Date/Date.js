@@ -9,14 +9,32 @@ const Date = (props) => {
         backgroundColor: "rgb(31, 31, 31)",
         color: "white",
         borderRadius: "7px",
-        padding: "10px 15px",
+        padding: "10px 20px",
         border: "1px solid white",
         marginRight: "15px",
       }}
     >
-      <span>{props.date.dateMonth}</span>
-      <span>{props.date.dateYear}</span>
-      <span>{props.date.dateDay}</span>
+      <span
+        style={{
+          fontSize: "13px",
+        }}
+      >
+        {props.date.dateMonth}
+      </span>
+      <span
+        style={{
+          fontSize: "11px",
+        }}
+      >
+        {props.date.dateYear}
+      </span>
+      <span
+        style={{
+          fontSize: "20px",
+        }}
+      >
+        {props.date.dateDay}
+      </span>
     </div>
   );
 };

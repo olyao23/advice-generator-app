@@ -10,7 +10,7 @@ const Card = (props) => {
         padding: "10px 30px",
         backgroundColor: "#4b4b4b",
         borderRadius: "10px",
-        margin: "10px",
+        margin: "10px 0",
         justifyContent: "space-between",
         alignItems: "center",
         boxShadow: "0.5px 0.5px 1px darkgray",

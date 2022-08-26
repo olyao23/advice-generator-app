@@ -8,7 +8,6 @@ const App = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        textShadow: "0.5px 0.5px 1px darkgray",
         flexDirection: "column",
         backgroundColor: "#4b4b4b",
         width: "700px",

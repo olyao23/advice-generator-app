@@ -3,7 +3,7 @@ const Price = (props) => {
     <span
       style={{
         backgroundColor: "#40005d",
-        padding: "7px 18px",
+        padding: "8px 18px",
         width: "70px",
         color: "white",
         fontWeight: "bold",

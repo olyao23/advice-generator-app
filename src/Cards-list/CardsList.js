@@ -1,6 +1,7 @@
 import Card from "./Card/Card";
 import Title from "./Card/Title/Title";
 import { useState } from "react";
+import ExpenseInfoList from "../Expense-info-list/ExpenseInfoList";
 
 const CardsList = () => {
   //  initial list of cards
@@ -86,74 +87,89 @@ const CardsList = () => {
   }
 
   return (
-    <div
-      style={{
-        backgroundColor: "rgb(31, 31, 31)",
-        padding: "20px",
-        width: "600px",
-        borderRadius: "10px",
-        display: "flex",
-        flexDirection: "column",
-        boxShadow: "0.5px 0.5px 1px darkgray",
-      }}
-    >
+    <div>
+      <ExpenseInfoList list={newList} />
+
       <div
         style={{
+          backgroundColor: "rgb(31, 31, 31)",
+          padding: "20px",
+          width: "600px",
+          borderRadius: "10px",
           display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
+          flexDirection: "column",
+          boxShadow: "0.5px 0.5px 1px darkgray",
         }}
       >
-        <Title title="Filter by year" />
-        <div>
-          <select
-            style={{
-              padding: "7px 25px",
-              fontWeight: "bold",
-              borderRadius: "5px",
-            }}
-            onInput={changeListByYear}
-          >
-            <option
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <h4 style={{ fontWeight: "bold", color: "white" }}>Filter by year</h4>
+          <div>
+            <select
               style={{
+                padding: "7px 25px",
                 fontWeight: "bold",
                 borderRadius: "5px",
               }}
-              value="2020"
+              onInput={changeListByYear}
             >
-              2020
-            </option>
-            <option
-              style={{
-                fontWeight: "bold",
-                borderRadius: "5px",
-              }}
-              value="2021"
-            >
-              2021
-            </option>
-            <option
-              style={{
-                fontWeight: "bold",
-                borderRadius: "5px",
-              }}
-              value="2022"
-            >
-              2022
-            </option>
-            <option
-              style={{
-                fontWeight: "bold",
-                borderRadius: "5px",
-              }}
-              value="2023"
-            >
-              2023
-            </option>
-          </select>
+              <option
+                style={{
+                  fontWeight: "bold",
+                  borderRadius: "5px",
+                }}
+                value="2020"
+              >
+                2020
+              </option>
+              <option
+                style={{
+                  fontWeight: "bold",
+                  borderRadius: "5px",
+                }}
+                value="2021"
+              >
+                2021
+              </option>
+              <option
+                style={{
+                  fontWeight: "bold",
+                  borderRadius: "5px",
+                }}
+                value="2022"
+              >
+                2022
+              </option>
+              <option
+                style={{
+                  fontWeight: "bold",
+                  borderRadius: "5px",
+                }}
+                value="2023"
+              >
+                2023
+              </option>
+            </select>
+          </div>
         </div>
+
+        {filteredList.length === 0 ? (
+          <div
+            style={{
+              textAlign: "center",
+            }}
+          >
+            <Title title="Found no expenses" />
+          </div>
+        ) : (
+          filteredList
+        )}
       </div>
-      {filteredList}
     </div>
   );
 };

@@ -29,14 +29,3 @@ const ExpenseInfo = (props) => {
 };
 
 export default ExpenseInfo;
-
-//props.title, title = title, amopunt, date
-//props.type, type=text, number, date
-
-//import ExpenseInfo from "./Expense-info/Expense-info";
-//
-// const ExpenseList = () => {
-//   return <div></div>;
-// };
-//
-// export default Expense;

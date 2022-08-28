@@ -1,5 +1,4 @@
 import CardsList from "../Cards-list/CardsList";
-import AddExpense from "../Add-Expense/AddExpense";
 
 const App = () => {
   return (
@@ -16,7 +15,6 @@ const App = () => {
         margin: "0 auto",
       }}
     >
-      <AddExpense />
       <CardsList />
     </div>
   );

@@ -1,6 +1,6 @@
-import ExpenseInfo from "./Expense-info/Expense-info";
 import { useState } from "react";
 import Button from "./Button/Button";
+import ExpenseInfoListComponents from "./ExpenseInfoListComponents/ExpenseInfoListComponents";
 
 const ExpenseInfoList = (props) => {
   const [title, setTitle] = useState("");
@@ -9,10 +9,14 @@ const ExpenseInfoList = (props) => {
 
   const [clickedCancel, setClickedCancel] = useState(false);
 
-  //it takes the already existing list and adds another card with the given above data
-  function addExpense() {
-    let newList = props.list;
-  }
+  function addExpense() {}
+
+  //  nez kako da gi stavam site razlichni states kako argumenti
+  const expenseInfo = [
+    { title: "Title", type: "text", onInput: "setTitle" },
+    { title: "Amount", type: "number", onInput: "setAmount" },
+    { title: "Date", type: "date", onInput: "setDate" },
+  ];
 
   return (
     <div
@@ -45,30 +49,23 @@ const ExpenseInfoList = (props) => {
               justifyContent: "space-between",
             }}
           >
-            <ExpenseInfo
-              title="Title"
-              type="text"
-              onInput={(userInput) => {
-                setTitle(userInput.target.value);
-                console.log(title);
-              }}
-            />
-            <ExpenseInfo
-              title="Amount"
-              type="number"
-              onInput={(userInput) => {
-                setAmount(userInput.target.value);
-                console.log(amount);
-              }}
-            />
-            <ExpenseInfo
-              title="Date"
-              type="date"
-              onInput={(userInput) => {
-                setDate(userInput.target.value);
-                console.log(date);
-              }}
-            />
+            <ExpenseInfoListComponents list={expenseInfo} />
+            {/*  da prasham kako da napravam map so ovie 3 components so onInput funkcijata*/}
+
+            {/*  onInput={(userInput) => {*/}
+            {/*    setTitle(userInput.target.value);*/}
+            {/*    console.log(title);*/}
+            {/*  }}*/}
+
+            {/*  onInput={(userInput) => {*/}
+            {/*    setAmount(userInput.target.value);*/}
+            {/*    console.log(amount);*/}
+            {/*  }}*/}
+
+            {/*  onInput={(userInput) => {*/}
+            {/*    setDate(userInput.target.value);*/}
+            {/*    console.log(date);*/}
+            {/*  }}*/}
           </div>
 
           <div

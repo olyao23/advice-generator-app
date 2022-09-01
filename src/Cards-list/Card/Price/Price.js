@@ -20,8 +20,3 @@ const Price = (props) => {
 };
 
 export default Price;
-
-//export default function Price(props) {
-//   return <div>{props.children ili props.price}</div>;
-// }
-//theme-ui koristi sx, a mislam deka i material-ui
